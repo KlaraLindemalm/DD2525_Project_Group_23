@@ -14,7 +14,8 @@ const TIMEOUT = 5000; // milliseconds
 
 function runRegexWithTimeout(pattern, input) {
   return new Promise((resolve) => {
-    const child = spawn("node", ["regex_worker.js", pattern, input]);
+    //const child = spawn("node", ["regex_worker.js", pattern, input]);
+    const child = spawn("node", ["--enable-experimental-regexp_engine-on-excessive-backtracks", "regex_worker.js", pattern, input]);
 
     const startTime = Date.now();
     const timeout = setTimeout(() => {
