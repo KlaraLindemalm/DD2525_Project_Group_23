@@ -37,11 +37,12 @@ def time_regex(pattern, test_str, timeout=TIMEOUT):
     return round(end - start_time, 4)
 
 # Benchmark loop
-for pattern, increasing_input in evil_patterns:
-    print(f"\nTesting pattern: {pattern}")
-    for size in range(5, MAX_SIZE + 1, STEP):
-        test_input = increasing_input * size + "X"  # X Break the match at the end
-        duration = time_regex(pattern, test_input)
-        print(f"  Input size: {len(test_input):3d} | Time: {duration}")
-        if duration == "TIMEOUT":
-            break  # Stop if it's catastrophic and takes longer then TIMEOUT
+if __name__ == "__main__":
+    for pattern, increasing_input in evil_patterns:
+        print(f"\nTesting pattern: {pattern}")
+        for size in range(5, MAX_SIZE + 1, STEP):
+            test_input = increasing_input * size + "X"  # X Break the match at the end
+            duration = time_regex(pattern, test_input)
+            print(f"  Input size: {len(test_input):3d} | Time: {duration}")
+            if duration == "TIMEOUT":
+                break  # Stop if it's catastrophic and takes longer then TIMEOUT
