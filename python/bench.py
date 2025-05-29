@@ -12,9 +12,9 @@ evil_patterns = [
     ("(a|b|ab)*$", "ab"),            # ambiguous branching
 ]
 
-MAX_SIZE = 100           # Maximum number of pattern repetitions
+MAX_SIZE = 200          # Maximum number of pattern repetitions
 STEP = 5                # Increment size
-TIMEOUT = 5             # Seconds
+TIMEOUT = 10             # Seconds
 
 # Timeout-safe matching function
 def run_regex(pattern, test_str, result_queue):

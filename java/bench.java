@@ -16,9 +16,9 @@ public class Bench {
         }
     }
 
-    static final int MAX_SIZE = 100;
+    static final int MAX_SIZE = 200;
     static final int STEP = 5;
-    static final int TIMEOUT = 5; // seconds
+    static final int TIMEOUT = 10; // seconds
 
     static PatternTest[] evilPatterns = new PatternTest[] {
         new PatternTest("(a+)+$", "a"),

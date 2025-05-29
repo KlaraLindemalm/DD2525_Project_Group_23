@@ -14,7 +14,8 @@ const TIMEOUT = 10_000; // milliseconds
 
 function runRegexWithTimeout(pattern, input) {
   return new Promise((resolve) => {
-    const child = spawn("node", ["regex_worker.js", pattern, input]);
+    //const child = spawn("node", ["regex_worker.js", pattern, input]);
+    const child = spawn("node", ["--enable-experimental-regexp_engine-on-excessive-backtracks", "regex_worker.js", pattern, input]);
 
     const startTime = Date.now();
     const timeout = setTimeout(() => {
@@ -40,7 +41,7 @@ async function testPattern(pattern, baseInput) {
     const testStr = baseInput.repeat(size) + "X"; // Ensure it doesn't match
     const result = await runRegexWithTimeout(pattern, testStr);
     console.log(`  Input size: ${testStr.length} | Time: ${result}`);
-    fs.appendFileSync("js_results.csv", `NodeJS,${pattern},${testStr.length},${result}\n`);
+    fs.appendFileSync("js_linear_results.csv", `NodeJS,${pattern},${testStr.length},${result}\n`);
     if (result === "TIMEOUT" || result === "ERROR") break;
   }
 }
