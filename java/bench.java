@@ -1,6 +1,8 @@
 import java.util.concurrent.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Bench {
 
@@ -30,11 +32,19 @@ public class Bench {
             System.out.println("\nTesting pattern: " + test.pattern);
             for (int size = 5; size <= MAX_SIZE; size += STEP) {
                 StringBuilder sb = new StringBuilder();
-                sb.append(test.baseInput.repeat(size)).append("X"); // 'X' breaks the match
+                sb.append(test.baseInput.repeat(size)).append("X");
                 String testInput = sb.toString();
 
                 String result = timeRegex(test.pattern, testInput);
                 System.out.printf("  Input size: %3d | Time: %s%n", testInput.length(), result);
+
+                // ✅ Write to CSV
+                try (FileWriter writer = new FileWriter("java_results.csv", true)) {
+                    writer.write(String.format("Java,%s,%d,%s\n", test.pattern, testInput.length(), result));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
                 if ("TIMEOUT".equals(result)) break;
             }
         }

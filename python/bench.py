@@ -1,6 +1,8 @@
 import re
 import time
 import multiprocessing
+import csv
+
 
 
 evil_patterns = [
@@ -37,12 +39,16 @@ def time_regex(pattern, test_str, timeout=TIMEOUT):
     return round(end - start_time, 4)
 
 # Benchmark loop
-if __name__ == "__main__":
+if __name__ == '__main__':
     for pattern, increasing_input in evil_patterns:
         print(f"\nTesting pattern: {pattern}")
         for size in range(5, MAX_SIZE + 1, STEP):
-            test_input = increasing_input * size + "X"  # X Break the match at the end
+            test_input = increasing_input * size + "X" # X Break the match at the end
             duration = time_regex(pattern, test_input)
             print(f"  Input size: {len(test_input):3d} | Time: {duration}")
+            with open("python_results.csv", "a", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow(["Python", pattern, len(test_input), duration])
             if duration == "TIMEOUT":
-                break  # Stop if it's catastrophic and takes longer then TIMEOUT
+                break # Stop if it's catastrophic and takes longer then TIMEOUT
+
