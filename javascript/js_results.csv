@@ -1,64 +1,60 @@
-NodeJS,(a+)+$,6,TIMEOUT
-NodeJS,(a|aa)+$,6,TIMEOUT
-NodeJS,(.*a){5},6,TIMEOUT
-NodeJS,(a|b|ab)*$,11,TIMEOUT
-NodeJS,(a+)+$,6,0.0280s
-NodeJS,(a+)+$,11,0.0250s
-NodeJS,(a+)+$,16,0.0260s
-NodeJS,(a+)+$,21,0.0880s
-NodeJS,(a+)+$,26,2.0130s
-NodeJS,(a+)+$,31,TIMEOUT
-NodeJS,(a|aa)+$,6,0.0330s
-NodeJS,(a|aa)+$,11,0.0260s
-NodeJS,(a|aa)+$,16,0.0260s
-NodeJS,(a|aa)+$,21,0.0300s
-NodeJS,(a|aa)+$,26,0.0420s
-NodeJS,(a|aa)+$,31,0.2050s
-NodeJS,(a|aa)+$,36,2.0460s
-NodeJS,(a|aa)+$,41,TIMEOUT
-NodeJS,(.*a){5},6,0.0300s
-NodeJS,(.*a){5},11,0.0250s
-NodeJS,(.*a){5},16,0.0250s
-NodeJS,(.*a){5},21,0.0250s
-NodeJS,(.*a){5},26,0.0240s
-NodeJS,(.*a){5},31,0.0250s
-NodeJS,(.*a){5},36,0.0250s
-NodeJS,(.*a){5},41,0.0240s
-NodeJS,(.*a){5},46,0.0240s
-NodeJS,(.*a){5},51,0.0250s
-NodeJS,(.*a){5},56,0.0250s
-NodeJS,(.*a){5},61,0.0250s
-NodeJS,(.*a){5},66,0.0260s
-NodeJS,(.*a){5},71,0.0260s
-NodeJS,(.*a){5},76,0.0280s
-NodeJS,(.*a){5},81,0.0340s
-NodeJS,(.*a){5},86,0.0340s
-NodeJS,(.*a){5},91,0.0380s
-NodeJS,(.*a){5},96,0.0270s
-NodeJS,(.*a){5},101,0.0260s
-NodeJS,(.*a){5},106,0.0250s
-NodeJS,(.*a){5},111,0.0260s
-NodeJS,(.*a){5},116,0.0260s
-NodeJS,(.*a){5},121,0.0240s
-NodeJS,(.*a){5},126,0.0250s
-NodeJS,(.*a){5},131,0.0250s
-NodeJS,(.*a){5},136,0.0250s
-NodeJS,(.*a){5},141,0.0240s
-NodeJS,(.*a){5},146,0.0250s
-NodeJS,(.*a){5},151,0.0240s
-NodeJS,(.*a){5},156,0.0240s
-NodeJS,(.*a){5},161,0.0250s
-NodeJS,(.*a){5},166,0.0270s
-NodeJS,(.*a){5},171,0.0260s
-NodeJS,(.*a){5},176,0.0270s
-NodeJS,(.*a){5},181,0.0250s
-NodeJS,(.*a){5},186,0.0250s
-NodeJS,(.*a){5},191,0.0250s
-NodeJS,(.*a){5},196,0.0250s
-NodeJS,(.*a){5},201,0.0250s
-NodeJS,(a|b|ab)*$,11,0.0250s
-NodeJS,(a|b|ab)*$,21,0.0250s
-NodeJS,(a|b|ab)*$,31,0.0290s
-NodeJS,(a|b|ab)*$,41,0.1730s
-NodeJS,(a|b|ab)*$,51,4.8460s
-NodeJS,(a|b|ab)*$,61,TIMEOUT
+NodeJS | (a+)+$ | 6 | 0.0290s
+NodeJS | (a+)+$ | 11 | 0.0250s
+NodeJS | (a+)+$ | 16 | 0.0270s
+NodeJS | (a+)+$ | 21 | 0.0880s
+NodeJS | (a+)+$ | 26 | 2.0630s
+NodeJS | (a+)+$ | 31 | TIMEOUT
+NodeJS | (a|aa)+$ | 6 | 0.0330s
+NodeJS | (a|aa)+$ | 11 | 0.0270s
+NodeJS | (a|aa)+$ | 16 | 0.0270s
+NodeJS | (a|aa)+$ | 21 | 0.0270s
+NodeJS | (a|aa)+$ | 26 | 0.0440s
+NodeJS | (a|aa)+$ | 31 | 0.2260s
+NodeJS | (a|aa)+$ | 36 | 2.2740s
+NodeJS | (a|aa)+$ | 41 | TIMEOUT
+NodeJS | (.*a){5} | 6 | 0.0550s
+NodeJS | (.*a){5} | 11 | 0.0250s
+NodeJS | (.*a){5} | 16 | 0.0250s
+NodeJS | (.*a){5} | 21 | 0.0260s
+NodeJS | (.*a){5} | 26 | 0.0250s
+NodeJS | (.*a){5} | 31 | 0.0250s
+NodeJS | (.*a){5} | 36 | 0.0250s
+NodeJS | (.*a){5} | 41 | 0.0260s
+NodeJS | (.*a){5} | 46 | 0.0280s
+NodeJS | (.*a){5} | 51 | 0.0320s
+NodeJS | (.*a){5} | 56 | 0.0270s
+NodeJS | (.*a){5} | 61 | 0.0280s
+NodeJS | (.*a){5} | 66 | 0.0260s
+NodeJS | (.*a){5} | 71 | 0.0250s
+NodeJS | (.*a){5} | 76 | 0.0250s
+NodeJS | (.*a){5} | 81 | 0.0270s
+NodeJS | (.*a){5} | 86 | 0.0260s
+NodeJS | (.*a){5} | 91 | 0.0280s
+NodeJS | (.*a){5} | 96 | 0.0250s
+NodeJS | (.*a){5} | 101 | 0.0240s
+NodeJS | (.*a){5} | 106 | 0.0250s
+NodeJS | (.*a){5} | 111 | 0.0250s
+NodeJS | (.*a){5} | 116 | 0.0240s
+NodeJS | (.*a){5} | 121 | 0.0270s
+NodeJS | (.*a){5} | 126 | 0.0250s
+NodeJS | (.*a){5} | 131 | 0.0260s
+NodeJS | (.*a){5} | 136 | 0.0250s
+NodeJS | (.*a){5} | 141 | 0.0300s
+NodeJS | (.*a){5} | 146 | 0.0270s
+NodeJS | (.*a){5} | 151 | 0.0280s
+NodeJS | (.*a){5} | 156 | 0.0310s
+NodeJS | (.*a){5} | 161 | 0.0270s
+NodeJS | (.*a){5} | 166 | 0.0260s
+NodeJS | (.*a){5} | 171 | 0.0240s
+NodeJS | (.*a){5} | 176 | 0.0270s
+NodeJS | (.*a){5} | 181 | 0.0260s
+NodeJS | (.*a){5} | 186 | 0.0260s
+NodeJS | (.*a){5} | 191 | 0.0250s
+NodeJS | (.*a){5} | 196 | 0.0250s
+NodeJS | (.*a){5} | 201 | 0.0250s
+NodeJS | (a|b|ab)*$ | 11 | 0.0260s
+NodeJS | (a|b|ab)*$ | 21 | 0.0260s
+NodeJS | (a|b|ab)*$ | 31 | 0.0300s
+NodeJS | (a|b|ab)*$ | 41 | 0.1750s
+NodeJS | (a|b|ab)*$ | 51 | 4.7840s
+NodeJS | (a|b|ab)*$ | 61 | TIMEOUT

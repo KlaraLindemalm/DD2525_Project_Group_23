@@ -40,7 +40,7 @@ async function testPattern(pattern, baseInput) {
     const testStr = baseInput.repeat(size) + "X"; // Ensure it doesn't match
     const result = await runRegexWithTimeout(pattern, testStr);
     console.log(`  Input size: ${testStr.length} | Time: ${result}`);
-    fs.appendFileSync("js_results.csv", `NodeJS,${pattern},${testStr.length},${result}\n`);
+    fs.appendFileSync("js_results.csv", `NodeJS | ${pattern} | ${testStr.length} | ${result}\n`);
     if (result === "TIMEOUT" || result === "ERROR") break;
   }
 }

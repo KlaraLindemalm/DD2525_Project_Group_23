@@ -40,7 +40,7 @@ public class Bench {
 
                 // ✅ Write to CSV
                 try (FileWriter writer = new FileWriter("java_results.csv", true)) {
-                    writer.write(String.format("Java,%s,%d,%s\n", test.pattern, testInput.length(), result));
+                    writer.write(String.format("Java | %s | %d | %s\n", test.pattern, testInput.length(), result));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
