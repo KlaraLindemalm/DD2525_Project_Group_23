@@ -39,7 +39,7 @@ public class Bench {
                 String result = timeRegex(test.pattern, testInput);
                 System.out.printf("  Input size: %3d | Time: %s%n", testInput.length(), result);
 
-                // ✅ Write to CSV
+                // Write to CSV
                 try (FileWriter writer = new FileWriter("java_results.csv", true)) {
                     writer.write(String.format("Java | %s | %d | %s\n", test.pattern, testInput.length(), result));
                 } catch (IOException e) {
