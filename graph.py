@@ -10,7 +10,7 @@ df = df.apply(pd.to_numeric, errors='coerce')  # ensures NaN is properly recogni
 
 # Plotting
 plt.figure(figsize=(10, 6))
-for col in ["Python", "Java", "JsL", "JsE"]:
+for col in ["Python", "Java", "Js Experimental", "Js Original"]:
     plt.plot(df["Input"], df[col], marker='o', label=col)  # lines will stop at NaNs
 
 #plt.title("Regex Performance for (a+)+$ Pattern")
