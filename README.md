@@ -11,7 +11,6 @@
 
 ## Running the program:
 **For each language:**
-1. Run the script: 
 - Java:
 ```bash
 cd java
